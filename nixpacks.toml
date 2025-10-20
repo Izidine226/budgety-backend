@@ -1,0 +1,13 @@
+# Fichier de configuration pour Railway (Nixpacks)
+
+[phases.install]
+# On remplace le 'npm ci' par défaut par cette commande
+cmds = ["rm -f package-lock.json && npm install"]
+
+[phases.build]
+# On n'a pas besoin d'étape de build séparée
+cmds = []
+
+[start]
+# La commande pour démarrer le serveur
+cmd = "node server.js"
